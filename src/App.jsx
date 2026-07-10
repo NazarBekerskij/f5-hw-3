@@ -1,5 +1,13 @@
 import Profile from './components/Profile.jsx/Profile'
+import Statistics from './components/Statistics/Statistics'
+import Friends from './components/Friends/Friends'
+import TransactionHistory from './components/TransactionHistory/TransactionHistory'
+
 import user from './user.json'
+import data from './data.json'
+import friends from './friends.json'
+import transactions from './transactions.json'
+
 import './App.css'
 
 
@@ -13,6 +21,22 @@ function App() {
       avatar={user.avatar}
       stats={user.stats}
     />
+
+
+
+
+    <Statistics
+        title="Upload stats"
+        stats={data}
+       />
+
+
+
+       <Friends friends={friends} />
+
+
+
+       <TransactionHistory items={transactions} />;
     </>
   )
 }

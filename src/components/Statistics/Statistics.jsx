@@ -1,17 +1,13 @@
-export default function Statistics({ title, stats }) {
+export default function Statistics({stats}) {
   return (
-    <section className="statistics">
-      {/* Якщо title передається, відображаємо його */}
-      {title && <h2 className="title">{title}</h2>}
-
-      <ul className="stat-list">
-        {stats.map(item => (
-          <li key={item.id} className="item">
-            <span className="label">{item.label}</span>
-            <span className="percentage">{item.percentage}%</span>
-          </li>
-        ))}
-      </ul>
-    </section>
+    <ul>
+      <h2>UPLOAD STATS</h2>
+      {stats.map(({id, label, percentage}) => (
+        <li key={id}>
+          <span>{label}</span>
+          <span>{percentage}%</span>
+        </li>
+      ))}
+    </ul>
   );
 }
