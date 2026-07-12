@@ -2,6 +2,10 @@ import Profile from './components/Profile.jsx/Profile'
 import Statistics from './components/Statistics/Statistics'
 import Friends from './components/Friends/Friends'
 import TransactionHistory from './components/TransactionHistory/TransactionHistory'
+import Title from './components/Title/Title'
+
+
+
 
 import user from './user.json'
 import data from './data.json'
@@ -14,6 +18,14 @@ import './App.css'
 function App() {
   return (
     <>
+
+    <Title/>
+
+
+
+
+
+
      <Profile
       username={user.username}
       tag={user.tag}
